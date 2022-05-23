@@ -24,5 +24,6 @@ Route::get('/', HomeController::class);
 
 Route::resource('cursos', CursoController::class);
 
+12213
 ?>
 
