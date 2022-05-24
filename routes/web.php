@@ -5,9 +5,14 @@
 //vistas:
 // es la encargada de mostrar la información al usuario, con de forma gráfica y legible. 
 
+use App\Http\Controllers\ContactanosController;
 use App\Http\Controllers\CursoController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+
+
+use App\Mail\ContactanosMailable;
+use Illuminate\Support\Facades\Mail;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,10 +25,13 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/', HomeController::class); 
+Route::get('/', HomeController::class)->name('home');
 
 Route::resource('cursos', CursoController::class);
 
-/* 12213 */
+Route::view('nosotros', 'nosotros')->name('nosotros');
+
+Route::get('contactanos', [ContactanosController::class, 'index'->name('contactanos.index')
+
 ?>
 
