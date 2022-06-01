@@ -10,7 +10,7 @@
             </li>
 
             <li>
-                <a href="{{route('contactanos.index')}}">Contáctanos</a>
+                <a href="{{route('contactanos.index')}}" class="{{request()->routeIs('contactanos.index') ? 'active' : ''}}">Contáctanos</a>
 
             </li>
 
